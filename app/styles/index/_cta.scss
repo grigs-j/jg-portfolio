@@ -1,0 +1,22 @@
+.cta {
+    margin-bottom: 14rem;
+    position: relative;
+    z-index: 5;
+}
+
+.cta--main-text {
+    font-family: $inc;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+.cta--cta-link {
+    font-size: 1.25rem;
+}
+@include breakpoint(xlarge) {
+    .cta--main-text {
+        font-size: 3.25rem;
+    }
+    .cta--cta-link {
+        font-size: 2.25rem;
+    }
+}

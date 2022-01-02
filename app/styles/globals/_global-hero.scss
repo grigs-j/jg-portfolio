@@ -1,0 +1,80 @@
+.hero {
+    margin-bottom: 4rem;
+}
+.hero--main-text {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    width: 70%;
+}
+.hero--subtext {
+    color: $dark;
+    display: block;
+    font-family: $inc;
+    font-size: 1rem;
+}
+.hero--subtext.bottom {
+    margin-bottom: 4rem;
+}
+.hero--content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+}
+.hero--main-text.active {
+    color: $offwhite;
+    position: absolute;
+    top: 2rem;
+    left: 1.1rem;
+}
+div.nav--social-links {
+    position: relative;
+    z-index: 5;
+    display: flex;
+}
+div.nav--social-links > a {
+    margin: 0 0.5rem;
+    font-size: 2.5rem;
+    transition: color 250ms ease-in-out;
+}
+div.nav--social-links > i.fab {
+    color: $dark;
+    &:hover {
+        color: $accent;
+    }
+}
+
+@include breakpoint(tablet) {
+    section.hero {
+        display: flex;
+    }
+    h1.hero--main-text {
+        animation: slide 1200ms ease-in-out;
+        width: 90%;
+    }
+    span.hero--subtext.top {
+        animation: slide 1300ms ease-in-out;
+    }
+    span.hero--subtext.bottom {
+        animation: slide 1400ms ease-in-out;
+    }
+    [icon1] {
+        animation: mobile-links-drop 1500ms ease-in-out;
+    }
+    [icon2] {
+        animation: mobile-links-drop 1650ms ease-in-out;
+    }
+    .hero--content {
+        margin-top: 8rem;
+    }
+}
+@include breakpoint(xlarge) {
+    h1.hero--main-text {
+        font-size: 5.25rem;
+    }
+
+    span.hero--subtext {
+        font-size: 1.25rem;
+    }
+}

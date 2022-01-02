@@ -1,0 +1,138 @@
+.nav {
+    margin-bottom: 2rem;
+}
+
+//div holding mobile-menu content before close
+.nav--mobile-logo-name {
+    width: 60%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    h2 {
+        color: $offwhite;
+    }
+}
+
+.nav--flex {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    background-color: #41428c;
+    ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 1rem;
+        padding: 3rem 0 0 2rem;
+    }
+    a {
+        line-height: 1.6;
+        font-size: 1.75rem;
+        color: $offwhite;
+        display: block;
+        padding: 0.6rem 0rem;
+        text-transform: uppercase;
+        &:hover {
+            transition: color 250ms ease-in-out;
+            color: $accent;
+        }
+    }
+    &.active {
+        display: flex;
+    }
+}
+
+//mobile toggle button styles
+.toggle-button {
+    position: absolute;
+    top: 2.3rem;
+    right: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 31px;
+    height: 21px;
+
+    &:hover {
+        .bar,
+        .bar2,
+        .bar3 {
+            transition: all 250ms ease-in-out;
+            background: $accent;
+        }
+    }
+    .bar {
+        height: 3px;
+        width: 65%;
+        background: $dark;
+        border-radius: 10px;
+    }
+    .bar2 {
+        width: 80%;
+    }
+    .bar3 {
+        width: 100%;
+    }
+}
+//mobile-close styles
+.fa-window-close {
+    display: none;
+    font-size: 2.1rem;
+    position: absolute;
+    top: 2.1rem;
+    right: 1.3rem;
+    color: $offwhite;
+    z-index: 10;
+    cursor: pointer;
+}
+.fa-window-close.active {
+    z-index: 10;
+    display: block;
+}
+.fa-window-close.active:hover {
+    transition: color 250ms ease-in-out;
+    color: $accent;
+}
+
+@include breakpoint(tablet) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        a.toggle-button {
+            display: none;
+        }
+        div.nav--flex {
+            transform: translateX(0%);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            opacity: 1;
+            background-color: transparent;
+        }
+
+        div.nav--flex > ul {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 8rem 0 0 0;
+        }
+        ul > li > a {
+            color: $dark;
+            font-size: 2.125rem;
+            padding: 0 0.5rem;
+            display: block;
+            width: fit-content;
+        }
+        .nav--mobile-logo-name {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}

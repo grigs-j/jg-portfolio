@@ -1,0 +1,85 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $offwhite;
+    font-family: $jfs;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+.shapes-container {
+    display: none;
+}
+@include breakpoint(tablet) {
+    .shapes-container {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        opacity: 0.1;
+        width: 97vw;
+        height: 100%;
+        overflow: hidden;
+    }
+    .shapes-container > svg {
+        position: absolute;
+        height: auto;
+        width: 120%;
+        z-index: 0;
+    }
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@include breakpoint(tablet) {
+    .container {
+        width: 75%;
+    }
+}
+
+a {
+    color: $dark;
+    text-decoration: underline 0.08em $dark;
+    transition: text-decoration-color 150ms, text-underline-offset 300ms;
+    transition: color 250ms ease-in-out;
+}
+a:visited {
+    text-decoration: underline;
+}
+a:hover {
+    color: $accent;
+    text-decoration-color: $accent;
+    text-underline-offset: 0.15em;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+li,
+ul,
+p {
+    color: $dark;
+    margin: 0;
+    padding: 0;
+}
+div.hero--content.container {
+    padding-left: 6rem;
+}

@@ -1,0 +1,14 @@
+.about {
+    margin-bottom: 14rem;
+}
+.about--content {
+    color: $dark;
+    font-family: $inc;
+    margin-bottom: 2rem;
+}
+
+@include breakpoint(tablet) {
+    .about--content {
+        width: 70%;
+    }
+}

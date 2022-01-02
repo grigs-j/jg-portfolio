@@ -1,0 +1,22 @@
+.thanks--content {
+    margin-bottom: 4rem;
+    padding-top: 6rem;
+}
+.thanks--main-text {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: $accent;
+}
+.thanks--subtext {
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+}
+footer {
+    display: none;
+}
+
+@include breakpoint(tablet) {
+    footer.footer {
+        display: block;
+    }
+}

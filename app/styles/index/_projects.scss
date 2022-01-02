@@ -1,0 +1,62 @@
+.projects {
+    margin-bottom: 14rem;
+    padding-top: 6rem;
+}
+
+.projects--main-text {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+.projects--project {
+    font-size: 1.825rem;
+    margin-bottom: 0.75rem;
+}
+.tooltiptext a {
+    font-weight: 700;
+}
+.tooltiptext {
+    display: none;
+}
+
+@include breakpoint(tablet) {
+    .projects--main-text {
+        font-size: 4rem;
+    }
+    .projects--content {
+        display: flex;
+        flex-direction: column;
+    }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    .tooltiptext {
+        display: block;
+        font-family: $inc;
+        font-size: 1rem;
+    }
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 350px;
+        background-color: #fff;
+        color: $dark;
+        padding: 0.25rem;
+        position: absolute;
+        z-index: 1;
+        top: 20%;
+        left: 40%;
+        border: 1px solid #999;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+}
+
+@include breakpoint(xlarge) {
+    .projects--main-text {
+        font-size: 6.25rem;
+    }
+    .projects--project {
+        font-size: 3rem;
+    }
+}

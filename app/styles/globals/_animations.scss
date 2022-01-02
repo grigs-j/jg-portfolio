@@ -1,0 +1,154 @@
+// .transdark {
+//     color: $offwhite;
+//     background-color: $dark;
+//     animation: fade-in 2500ms forwards;
+// }
+
+//links drop
+.drop1 {
+    animation: mobile-links-drop 900ms ease-in-out;
+}
+.drop2 {
+    animation: mobile-links-drop 1000ms ease-in-out;
+}
+.drop3 {
+    animation: mobile-links-drop 1100ms ease-in-out;
+}
+.drop4 {
+    animation: mobile-links-drop 1200ms ease-in-out;
+}
+.drop5 {
+    animation: mobile-links-drop 1300ms ease-in-out;
+}
+
+//mobile-close drop
+.fa-window-close {
+    animation: mobile-links-drop 800ms forwards;
+}
+
+.nav--flex.active {
+    animation: mobile-slide-in 350ms ease-in-out;
+}
+.nav--flex {
+    animation: mobile-slide-in 500ms backwards;
+}
+
+//hero mobile anims
+.hero--main-text {
+    animation: slide 1000ms ease-in-out;
+}
+span.hero--subtext.top {
+    animation: slide 1300ms ease-in-out;
+}
+span.hero--subtext.bottom {
+    animation: slide 1400ms ease-in-out;
+}
+[icon1] {
+    animation: mobile-links-drop 1450ms ease-in-out;
+}
+[icon2] {
+    animation: mobile-links-drop 1300ms ease-in-out;
+}
+
+.shapes-container > svg {
+    animation: slow-rotate 80000ms linear infinite;
+}
+
+//projects links drop
+
+.projects--main-text {
+    animation: drop 1500ms forwards;
+}
+.projects--project {
+    animation: drop 1700ms forwards;
+}
+
+@keyframes mobile-links-drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-105%);
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes mobile-close-slide {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    90% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(105%);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+@keyframes mobile-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(105%);
+    }
+    70% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slow-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    20% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}

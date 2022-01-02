@@ -1,0 +1,546 @@
+$font-title: "Raleway", sans-serif;
+$font-body: "Open Sans", sans-serif;
+$introBg: #1c2431;
+$mainBg: #181f2a;
+$footerBg: #0b1523;
+$testBg: #202a3c;
+$ctaCyan: #65e2d9;
+$ctaBlue: #339ecc;
+$errorRed: #ff4242;
+
+$breakpoints: (
+    small: 499px,
+    medium: 699px,
+    large: 999px,
+    xlarge: 1399px,
+);
+
+@mixin breakpoint($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value) {
+        @content;
+    }
+}
+
+html {
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-body;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    margin-bottom: 1.5em;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $font-title;
+    margin: 0;
+}
+
+section {
+    padding-bottom: 6rem;
+    background-color: $mainBg;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.button {
+    background: linear-gradient(to right, $ctaCyan, $ctaBlue);
+    border: none;
+    font-size: 0.95em;
+    padding: 20px 40px;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 285px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+
+    &:hover {
+        background: linear-gradient(to left, $ctaCyan, $ctaBlue);
+    }
+}
+
+.header {
+    background: $introBg;
+    padding-top: 1.5rem;
+
+    &--control {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &--links {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    img {
+        width: 85px;
+    }
+
+    a {
+        font-size: 0.875rem;
+        margin: 0 0.25rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.hero {
+    position: relative;
+    background: $introBg;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 40vw;
+        bottom: 0px;
+        background-image: url("/src/img/fylodark/bg-curvy-mobile.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        z-index: 0;
+    }
+
+    > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    img {
+        width: 100%;
+        max-width: 716px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        margin: 1.5rem;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+}
+
+.features {
+    background-color: $mainBg;
+
+    .feature-grid-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 6rem;
+        max-width: 880px;
+        margin: 0 auto;
+    }
+
+    .feature {
+        text-align: center;
+
+        &-image {
+            margin-bottom: 30px;
+            height: 80px;
+        }
+
+        &-title {
+            font-family: $font-title;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.productive {
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        max-width: 600px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    &-image img {
+        display: block;
+        width: 100%;
+        max-width: 615px;
+    }
+
+    &-text {
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            background-image: url("/src/img/fylodark/icon-arrow.svg");
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 30px;
+            color: $ctaCyan;
+            border-bottom: 1px solid $ctaCyan;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                border-bottom: 1px solid #fff;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.testimonial {
+    padding-bottom: 22rem;
+
+    &-grid {
+        display: grid;
+        position: relative;
+        z-index: 0;
+        grid-template-columns: 1fr;
+        gap: 30px;
+
+        &:first-child:before {
+            content: url("/src/img/fylodark//bg-quotes.png");
+            position: absolute;
+            z-index: -1;
+            top: -35px;
+            left: -25px;
+            width: 60px;
+            height: 45px;
+        }
+    }
+
+    &-card {
+        background: $testBg;
+        padding: 3rem 0;
+        border-radius: 5px;
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+    }
+
+    &-text {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    &-reference {
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        grid-template-rows: 20px 20px;
+        column-gap: 1rem;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    &-img {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+
+    &-author-name {
+        font-weight: 700;
+        font-size: 0.825rem;
+    }
+
+    &-author-title {
+        font-size: 0.725rem;
+    }
+}
+
+.sign-up {
+    background: $mainBg;
+    position: relative;
+
+    &-block {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        background: $introBg;
+        border-radius: 5px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        left: 50%;
+        bottom: -22rem;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        padding: 2rem;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .form-container {
+        display: flex;
+        flex-wrap: wrap;
+        min-width: 100%;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    .btn-sm {
+        max-width: 100%;
+        padding: 1.25rem 2.5rem;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        outline: none;
+        border: none;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        color: $footerBg;
+        padding: 1.25rem 2.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.footer {
+    background: $footerBg;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20rem 0 4rem;
+
+    &-logo {
+        margin-bottom: 2.5rem;
+    }
+
+    &-address {
+        display: flex;
+        margin-bottom: 20px;
+
+        img {
+            margin-right: 20px;
+            margin-top: 3px;
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    &-contact {
+        &-phone {
+            display: flex;
+            margin-bottom: 20px;
+
+            img {
+                margin-right: 20px;
+                height: 20px;
+                width: 20px;
+            }
+        }
+
+        &-email {
+            display: flex;
+            padding-bottom: 4rem;
+            &:hover {
+                text-decoration: underline;
+            }
+
+            img {
+                margin-right: 20px;
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+
+    &-links1,
+    &-links2 {
+        margin-bottom: 4rem;
+
+        a {
+            display: block;
+            justify-self: center;
+            margin-bottom: 1rem;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-social {
+        display: flex;
+        justify-content: center;
+        i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+            border-radius: 50%;
+            margin-right: 16px;
+            padding: 8px;
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+
+@include breakpoint(medium) {
+    .hero::after {
+        background-image: url("/src/img/fylodark/bg-curvy-desktop.svg");
+        height: 33vw;
+    }
+
+    .feature-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include breakpoint(large) {
+    .header {
+        padding: 4rem 0;
+    }
+
+    .header img {
+        width: 185px;
+    }
+
+    div.header--links a {
+        padding: 0 1rem;
+    }
+
+    section.hero {
+        padding-bottom: 10rem;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+        max-width: 50%;
+        margin: 0 auto;
+        padding: 4rem 0;
+    }
+
+    .hero p {
+        max-width: 50%;
+        margin: 0 auto;
+        padding-bottom: 2rem;
+    }
+
+    .features div.feature-grid-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6vw 9vw;
+    }
+
+    .productive-text h2 {
+        max-width: 400px;
+        font-size: 2.25rem;
+    }
+
+    .productive-text {
+        margin-right: 6rem;
+    }
+
+    .productive {
+        padding-bottom: 10rem;
+    }
+
+    .productive-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: none;
+    }
+
+    .testimonial {
+        padding-bottom: 12rem;
+    }
+
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonial-test {
+        max-width: 100%;
+    }
+
+    .testimonial-reference {
+        max-width: 100%;
+    }
+
+    div.sign-up-block {
+        bottom: -16rem;
+        max-width: 880px;
+    }
+
+    #sign-up-form {
+        flex-direction: row;
+        align-items: flex-start;
+        height: 3.5rem;
+    }
+
+    input[type="email"] {
+        display: flex;
+        flex: 1 1 400px;
+        margin-right: 25px;
+    }
+    input.button.btn-sm {
+        max-width: 285px;
+    }
+
+    footer.footer {
+        padding-top: 14rem;
+        display: flex;
+    }
+
+    div.footer-control {
+        display: grid;
+        grid-template-columns: 300px 1fr 1fr 1fr auto;
+        grid-template-rows: repeat(250px, 1fr);
+        row-gap: 2rem;
+        column-gap: 4rem;
+    }
+
+    div.footer-address {
+        margin: 0;
+    }
+
+    div.footer-logo {
+        grid-column: 1 / end;
+        max-height: 150px;
+        margin-bottom: 0px;
+    }
+}

@@ -1,0 +1,15 @@
+$breakpoints: (
+    small: 600px,
+    tablet: 767px,
+    desktop: 999px,
+    xlarge: 1200px,
+    full: 1350px,
+);
+
+@mixin breakpoint($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value) {
+        @content;
+    }
+}
