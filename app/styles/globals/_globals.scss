@@ -19,6 +19,9 @@ body {
     margin: 0;
     padding: 0;
 }
+body.noscroll {
+    overflow: hidden;
+}
 .shapes-container {
     display: none;
 }

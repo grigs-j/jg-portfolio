@@ -57,20 +57,7 @@ div.nav--social-links > i.fab {
         display: flex;
     }
     h1.hero--main-text {
-        animation: slide 1200ms ease-in-out;
         width: 90%;
-    }
-    span.hero--subtext.top {
-        animation: slide 1300ms ease-in-out;
-    }
-    span.hero--subtext.bottom {
-        animation: slide 1400ms ease-in-out;
-    }
-    [icon1] {
-        animation: mobile-links-drop 1500ms ease-in-out;
-    }
-    [icon2] {
-        animation: mobile-links-drop 1650ms ease-in-out;
     }
     .hero--content {
         margin-top: 8rem;

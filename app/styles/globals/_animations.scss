@@ -1,69 +1,89 @@
-// .transdark {
-//     color: $offwhite;
-//     background-color: $dark;
-//     animation: fade-in 2500ms forwards;
-// }
+.trans-dark {
+    color: $offwhite;
+    background-color: $dark;
+    animation: fade-in 1500ms ease-in-out;
+}
 
 //links drop
 .drop1 {
-    animation: mobile-links-drop 900ms ease-in-out;
+    animation: drop-y 900ms ease-in-out;
 }
 .drop2 {
-    animation: mobile-links-drop 1000ms ease-in-out;
+    animation: drop-y 1000ms ease-in-out;
 }
 .drop3 {
-    animation: mobile-links-drop 1100ms ease-in-out;
+    animation: drop-y 1100ms ease-in-out;
 }
 .drop4 {
-    animation: mobile-links-drop 1200ms ease-in-out;
+    animation: drop-y 1200ms ease-in-out;
 }
 .drop5 {
-    animation: mobile-links-drop 1300ms ease-in-out;
+    animation: drop-y 1300ms ease-in-out;
 }
 
 //mobile-close drop
 .fa-window-close {
-    animation: mobile-links-drop 800ms forwards;
+    animation: drop-y 800ms forwards;
 }
 
 .nav--flex.active {
-    animation: mobile-slide-in 350ms ease-in-out;
+    animation: slide-left 350ms ease-in-out;
 }
+
 .nav--flex {
-    animation: mobile-slide-in 500ms backwards;
+    // animation: slide-left 350ms backwards;
+    animation: mobile-close-right 350ms ease-in-out;
 }
 
 //hero mobile anims
-.hero--main-text {
-    animation: slide 1000ms ease-in-out;
+h1.hero--main-text {
+    animation: slide-left-fade-in 1200ms ease-in-out;
 }
 span.hero--subtext.top {
-    animation: slide 1300ms ease-in-out;
+    animation: slide-left-fade-in 1300ms ease-in-out;
 }
 span.hero--subtext.bottom {
-    animation: slide 1400ms ease-in-out;
+    animation: slide-left-fade-in 1400ms ease-in-out;
 }
 [icon1] {
-    animation: mobile-links-drop 1450ms ease-in-out;
+    animation: drop-y 1450ms ease-in-out;
 }
 [icon2] {
-    animation: mobile-links-drop 1300ms ease-in-out;
+    animation: drop-y 1300ms ease-in-out;
+}
+.toggle-button {
+    animation: drop-y 600ms ease-in-out;
 }
 
+//svg rotate anim
 .shapes-container > svg {
     animation: slow-rotate 80000ms linear infinite;
 }
 
-//projects links drop
-
-.projects--main-text {
-    animation: drop 1500ms forwards;
-}
-.projects--project {
-    animation: drop 1700ms forwards;
+//io
+.slide-in {
+    animation: slide-to-right 600ms ease-in-out;
 }
 
-@keyframes mobile-links-drop {
+@include breakpoint(tablet) {
+    h1.hero--main-text {
+        animation: slide-left-fade-in 1200ms ease-in-out;
+    }
+    span.hero--subtext.top {
+        animation: slide-left-fade-in 1300ms ease-in-out;
+    }
+    span.hero--subtext.bottom {
+        animation: slide-left-fade-in 1400ms ease-in-out;
+    }
+    [icon1] {
+        animation: drop-y 1500ms ease-in-out;
+    }
+    [icon2] {
+        animation: drop-y 1650ms ease-in-out;
+    }
+}
+
+@keyframes drop-y {
     0% {
         opacity: 0;
         transform: translateY(-105%);
@@ -74,20 +94,6 @@ span.hero--subtext.bottom {
     100% {
         opacity: 1;
         transform: translateY(0%);
-    }
-}
-
-@keyframes mobile-close-slide {
-    0% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-    90% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(105%);
     }
 }
 
@@ -102,7 +108,7 @@ span.hero--subtext.bottom {
     }
 }
 
-@keyframes mobile-slide-in {
+@keyframes slide-left {
     0% {
         opacity: 0;
         transform: translateX(105%);
@@ -115,8 +121,33 @@ span.hero--subtext.bottom {
         transform: translateX(0%);
     }
 }
+@keyframes mobile-close-right {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    70% {
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(105%);
+    }
+}
 
-@keyframes slide {
+@keyframes slide-to-right {
+    0% {
+        opacity: 1;
+        transform: translateX(-10%);
+    }
+    20% {
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-left-fade-in {
     0% {
         opacity: 0;
         transform: translateX(50%);
@@ -136,19 +167,5 @@ span.hero--subtext.bottom {
     }
     100% {
         transform: rotate(1turn);
-    }
-}
-
-@keyframes drop {
-    0% {
-        opacity: 0;
-        transform: translateY(-50%);
-    }
-    20% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
     }
 }
