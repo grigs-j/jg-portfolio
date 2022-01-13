@@ -260,56 +260,92 @@
 
             <div class="hero container">
                 <nav class="nav">
-                    <a class="toggle-button">
+                    <a
+                        class="toggle-button toslide hide"
+                        id="toggle-button"
+                        data-slide
+                    >
                         <span class="bar"></span>
                         <span class="bar bar2"></span>
                         <span class="bar bar3"></span>
                     </a>
                     <span
-                        ><a><i class="far fa-window-close"></i></a
+                        ><a
+                            ><i
+                                class="far fa-window-close tofadein hide"
+                                data-fadein
+                            ></i></a
                     ></span>
-                    <div class="nav--flex">
+                    <div class="nav--flex" id="nav--flex">
                         <ul class="nav--list">
                             <div class="nav--mobile-logo-name">
                                 <h2>jonathan grigsby</h2>
                             </div>
-                            <li><a href="#" class="drop1">HOME</a></li>
                             <li>
-                                <a href="#projects" class="drop2">PROJECTS</a>
+                                <a href="#" class="link todrop hide" data-drop
+                                    >HOME</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#projects"
+                                    class="link todrop hide"
+                                    data-drop
+                                    >PROJECTS</a
+                                >
                             </li>
                             <li>
                                 <a
                                     href="/app/img/index/JonathanGrigsbyResume.pdf"
                                     target="_blank"
-                                    class="drop3"
+                                    class="link todrop hide"
+                                    data-drop
                                     >RESUME</a
                                 >
                             </li>
-                            <li><a href="#about" class="drop4">ABOUT</a></li>
                             <li>
-                                <a href="/app/pages/contact.html" class="drop5"
+                                <a
+                                    href="#about"
+                                    class="link todrop hide"
+                                    data-drop
+                                    >ABOUT</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="/app/pages/contact.html"
+                                    class="todrop hide"
+                                    data-drop
                                     >CONTACT</a
                                 >
                             </li>
                         </ul>
                     </div>
                 </nav>
-                <div class="hero--content">
-                    <h1 class="hero--main-text">jonathan grigsby</h1>
-                    <span class="hero--subtext top"
+                <div class="hero--content" id="hero--content">
+                    <h1 class="hero--main-text tofadein" data-fadein>
+                        jonathan grigsby
+                    </h1>
+                    <span class="hero--subtext tofadein" data-fadein
                         >front-end web developer</span
                     >
-                    <span class="hero--subtext bottom"
+                    <span class="hero--subtext tofadein" data-fadein
                         >creative design with a caffeinated heart</span
                     >
                     <div class="nav--social-links">
                         <a href="https://github.com/grigs-j" target="_blank"
-                            ><i class="fab fa-github-square" icon1></i
+                            ><i
+                                class="fab fa-github-square hide todrop"
+                                data-drop
+                            ></i
                         ></a>
                         <a
                             href="https://www.linkedin.com/in/jonathan-grigsby-21a726222/"
                             target="_blank"
-                            ><i class="fab fa-linkedin" icon2></i
+                            ><i
+                                class="fab fa-linkedin hide todrop"
+                                data-drop
+                            ></i
                         ></a>
                     </div>
                 </div>
@@ -318,8 +354,10 @@
 
         <section id="projects" class="projects">
             <div class="projects--content container">
-                <h1 class="projects--main-text slide-in">projects</h1>
-                <h2 class="projects--project tooltip slide-in">
+                <h1 class="projects--main-text toslide hide" data-slide>
+                    projects
+                </h1>
+                <h2 class="projects--project tooltip toslide hide" data-slide>
                     <div class="tooltiptext">
                         author's website designed using html, scss, javascript,
                         illustrator, and love.
@@ -328,7 +366,7 @@
                         >michaelgrigsby.com</a
                     >
                 </h2>
-                <h2 class="projects--project tooltip slide-in">
+                <h2 class="projects--project tooltip toslide hide" data-slide>
                     <div class="tooltiptext">
                         [<a
                             href="https://github.com/grigs-j/React-movie-search-database"
@@ -344,18 +382,18 @@
                         >movie-search app</a
                     >
                 </h2>
-                <h2 class="projects--project tooltip slide-in">
+                <h2 class="projects--project tooltip toslide hide" data-slide>
                     <div class="tooltiptext">
                         [<a
                             href="https://github.com/grigs-j/js-sudoku-solver"
                             target="_blank"
                             >github code</a
-                        >] sudoku puzzle solver built using apis, axios, html,
-                        css, and love.
+                        >] sudoku puzzle solver built using apis, axios,
+                        javascript, html, css, and love.
                     </div>
                     <a href="/app/pages/sudoku-index.html">sudoku solver</a>
                 </h2>
-                <h2 class="projects--project tooltip slide-in">
+                <h2 class="projects--project tooltip toslide hide" data-slide>
                     <div class="tooltiptext">
                         [<a
                             href="https://github.com/grigs-j/js-shopping-cart"
@@ -371,7 +409,18 @@
                         >shopping cart</a
                     >
                 </h2>
-                <h2 class="projects--project tooltip slide-in">
+                <h2 class="projects--project tooltip toslide hide" data-slide>
+                    <div class="tooltiptext">
+                        [<a
+                            href="https://github.com/grigs-j/js-2048-game"
+                            target="_blank"
+                            >github code</a
+                        >] javascript based game built on html, css, and
+                        javascript
+                    </div>
+                    <a href="/app/pages/2048-index.html">2048</a>
+                </h2>
+                <h2 class="projects--project tooltip toslide hide" data-slide>
                     <div class="tooltiptext">
                         [<a
                             href="https://github.com/grigs-j/js-pw-generator"
@@ -382,31 +431,23 @@
                     </div>
                     <a href="/app/pages/pw-index.html">password generator</a>
                 </h2>
-                <h2 class="projects--project tooltip slide-in">
-                    <div class="tooltiptext">
-                        [<a href="#" target="_blank">github code</a>] cloned
-                        websites using FrontEndMentor's templates utilzing html,
-                        scss, javascript, and love.
-                    </div>
-                    <a href="/app/pages/fem.html">website clones</a>
-                </h2>
             </div>
         </section>
 
         <section id="about" class="about container">
-            <div class="about--content slide-in">
+            <div class="about--content toslide hide" data-slide>
                 using over a decade of fine-dining culinary experience, i am
                 enthusiastically diving into the digital world to create
                 visually pleasing experiences.
             </div>
         </section>
 
-        <section class="cta dark">
+        <section class="cta">
             <div class="cta--content container">
-                <h2 class="cta--main-text slide-in dark">
+                <h2 class="cta--main-text toslide hide" data-slide>
                     interested in working together?
                 </h2>
-                <p class="cta--cta-link slide-in">
+                <p class="cta--cta-link toslide hide" data-slide>
                     <a class="dark" href="/app/pages/contact.html"
                         >let's talk</a
                     >
@@ -414,10 +455,10 @@
             </div>
         </section>
 
-        <section class="footer dark">
+        <section class="footer">
             <div class="footer--content container">
                 <div class="footer--links">
-                    <p class="footer--links-top slide-in">
+                    <p class="footer--links-top toslide hide" data-slide>
                         <a class="dark" href="#">top</a>
                     </p>
                 </div>

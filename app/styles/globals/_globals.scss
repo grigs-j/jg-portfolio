@@ -19,8 +19,13 @@ body {
     margin: 0;
     padding: 0;
 }
+//stop scrolling while mobile nav active
 body.noscroll {
     overflow: hidden;
+}
+//default hide for IO anim
+.hide {
+    visibility: hidden;
 }
 .shapes-container {
     display: none;
@@ -31,7 +36,7 @@ body.noscroll {
         position: absolute;
         z-index: 0;
         opacity: 0.1;
-        width: 97vw;
+        width: 97vw; //for scrollbar
         height: 100%;
         overflow: hidden;
     }

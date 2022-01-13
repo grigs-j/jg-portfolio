@@ -1,58 +1,12 @@
-.trans-dark {
-    color: $offwhite;
-    background-color: $dark;
-    animation: fade-in 1500ms ease-in-out;
-}
-
-//links drop
-.drop1 {
-    animation: drop-y 900ms ease-in-out;
-}
-.drop2 {
-    animation: drop-y 1000ms ease-in-out;
-}
-.drop3 {
-    animation: drop-y 1100ms ease-in-out;
-}
-.drop4 {
-    animation: drop-y 1200ms ease-in-out;
-}
-.drop5 {
-    animation: drop-y 1300ms ease-in-out;
-}
-
 //mobile-close drop
 .fa-window-close {
     animation: drop-y 800ms forwards;
 }
-
 .nav--flex.active {
     animation: slide-left 350ms ease-in-out;
 }
-
 .nav--flex {
-    // animation: slide-left 350ms backwards;
     animation: mobile-close-right 350ms ease-in-out;
-}
-
-//hero mobile anims
-h1.hero--main-text {
-    animation: slide-left-fade-in 1200ms ease-in-out;
-}
-span.hero--subtext.top {
-    animation: slide-left-fade-in 1300ms ease-in-out;
-}
-span.hero--subtext.bottom {
-    animation: slide-left-fade-in 1400ms ease-in-out;
-}
-[icon1] {
-    animation: drop-y 1450ms ease-in-out;
-}
-[icon2] {
-    animation: drop-y 1300ms ease-in-out;
-}
-.toggle-button {
-    animation: drop-y 600ms ease-in-out;
 }
 
 //svg rotate anim
@@ -61,43 +15,41 @@ span.hero--subtext.bottom {
 }
 
 //io
-.slide-in {
-    animation: slide-to-right 600ms ease-in-out;
+.ioSlide {
+    animation: ioSlide 1000ms ease-in-out;
+}
+.ioDrop {
+    animation: ioDrop 1000ms ease-in-out;
+}
+.ioFadeIn {
+    animation: ioFadeIn 1500ms ease-in-out;
 }
 
-@include breakpoint(tablet) {
-    h1.hero--main-text {
-        animation: slide-left-fade-in 1200ms ease-in-out;
-    }
-    span.hero--subtext.top {
-        animation: slide-left-fade-in 1300ms ease-in-out;
-    }
-    span.hero--subtext.bottom {
-        animation: slide-left-fade-in 1400ms ease-in-out;
-    }
-    [icon1] {
-        animation: drop-y 1500ms ease-in-out;
-    }
-    [icon2] {
-        animation: drop-y 1650ms ease-in-out;
-    }
-}
-
-@keyframes drop-y {
+@keyframes ioSlide {
     0% {
+        visibility: hidden;
         opacity: 0;
-        transform: translateY(-105%);
-    }
-    50% {
-        opacity: 0;
+        transform: translateX(-15%);
     }
     100% {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes ioDrop {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-15%);
+    }
+    100% {
+        visibility: visible;
         opacity: 1;
         transform: translateY(0%);
     }
 }
-
-@keyframes fade-in {
+@keyframes ioFadeIn {
     0% {
         visibility: hidden;
         opacity: 0;
@@ -107,47 +59,7 @@ span.hero--subtext.bottom {
         opacity: 1;
     }
 }
-
 @keyframes slide-left {
-    0% {
-        opacity: 0;
-        transform: translateX(105%);
-    }
-    70% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-@keyframes mobile-close-right {
-    0% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-    70% {
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(105%);
-    }
-}
-
-@keyframes slide-to-right {
-    0% {
-        opacity: 1;
-        transform: translateX(-10%);
-    }
-    20% {
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0%);
-    }
-}
-
-@keyframes slide-left-fade-in {
     0% {
         opacity: 0;
         transform: translateX(50%);
@@ -160,7 +72,6 @@ span.hero--subtext.bottom {
         transform: translateY(0%);
     }
 }
-
 @keyframes slow-rotate {
     0% {
         transform: rotate(0deg);
