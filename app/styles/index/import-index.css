@@ -186,6 +186,7 @@ div.nav--social-links > i.fab:hover {
   }
   h1.hero--main-text {
     width: 90%;
+    font-size: 4rem;
   }
   .hero--content {
     margin-top: 8rem;
