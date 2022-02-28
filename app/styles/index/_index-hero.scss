@@ -49,6 +49,12 @@ div.nav--social-links > i.fab {
         color: $accent;
     }
 }
+.nav--skills {
+    font-size: 1.25rem;
+}
+.nav--skills i {
+    margin: 0.75rem 0.5rem;
+}
 
 @include breakpoint(tablet) {
     section.hero--main {
@@ -66,6 +72,12 @@ div.nav--social-links > i.fab {
     }
 }
 @include breakpoint(xlarge) {
+    div.nav--skills {
+        font-size: 1.75rem;
+    }
+    .nav--skills i {
+        margin: 1.25rem 0.5rem;
+    }
     h1.hero--main-text {
         font-size: 5.25rem;
     }
