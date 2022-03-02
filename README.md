@@ -52,7 +52,7 @@
 ## About The Project
 
 ![project preview](https://i.postimg.cc/g2TG0xGF/jg-portfolio-preview.png)
-![project preview](https://i.postimg.cc/4nVPv6TK/jg-portfolio-mobile-preview.png)
+![project preview](https://i.postimg.cc/gcB7WsSK/jg-portfolio-mobile-preview.png)
 ![project preview](https://i.postimg.cc/bZNRj4Sb/jg-portfolio-desktop-preview2.png)
 ![project preview](https://i.postimg.cc/ppPfD3Z7/rmdb-desktop-preview.png)
 ![project preview](https://i.postimg.cc/q6T8DFdN/rmdb-mobile-preview.png)
