@@ -52,7 +52,19 @@
 ## About The Project
 
 ![project preview](https://i.postimg.cc/g2TG0xGF/jg-portfolio-preview.png)
-This is a portfolio website to show my front end web development skills. Main skills being html5, css3/scss, javascript, react, materialUI, styled, single page routing, and adobe illustrator; shown through projects. Javascript/react focused.
+![project preview](https://i.postimg.cc/4nVPv6TK/jg-portfolio-mobile-preview.png)
+![project preview](https://i.postimg.cc/bZNRj4Sb/jg-portfolio-desktop-preview2.png)
+![project preview](https://i.postimg.cc/ppPfD3Z7/rmdb-desktop-preview.png)
+![project preview](https://i.postimg.cc/q6T8DFdN/rmdb-mobile-preview.png)
+![project preview](https://i.postimg.cc/64fCkh9Y/mg-desktop-preview.png)
+![project preview](https://i.postimg.cc/nsNKBzRY/mg-desktop-preview2.png)
+![project preview](https://i.postimg.cc/vg9rzsCR/mg-mobile-preview.png)
+![project preview](https://i.postimg.cc/grVyLGv8/gatheredwares-desktop-preview.png)
+![project preview](https://i.postimg.cc/4m11qXys/gatheredwares-mobile-preview.png)
+![project preview](https://i.postimg.cc/p5fB2HBQ/2048-preview2.png)
+
+
+This is a portfolio website to show my front end web development skills. I focused heavily on javascript and then React. But also html5, css3/scss, materialUI, Stripe, Commerce.js, styled components, single page routing, rest APIs, node.js, and adobe illustrator; shown through projects.
 
 Projects include:
 
@@ -75,7 +87,8 @@ Projects include:
 -   [Node](https://nodejs.org/)
 -   [MaterialUI](https://mui.com/)
 -   [Stripe](https://stripe.com/)
--   [Styled](https://https://styled-components.com/.com/)
+-   [Styled](https://https://styled-components.com/)
+-   [Commerce.js](https://commercejs.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
