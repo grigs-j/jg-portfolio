@@ -53,15 +53,15 @@
 
 ![project preview](https://i.postimg.cc/g2TG0xGF/jg-portfolio-preview.png)
 ![project preview](https://i.postimg.cc/gcB7WsSK/jg-portfolio-mobile-preview.png)
-![project preview](https://i.postimg.cc/bZNRj4Sb/jg-portfolio-desktop-preview2.png)
-![project preview](https://i.postimg.cc/ppPfD3Z7/rmdb-desktop-preview.png)
-![project preview](https://i.postimg.cc/q6T8DFdN/rmdb-mobile-preview.png)
-![project preview](https://i.postimg.cc/64fCkh9Y/mg-desktop-preview.png)
-![project preview](https://i.postimg.cc/nsNKBzRY/mg-desktop-preview2.png)
-![project preview](https://i.postimg.cc/vg9rzsCR/mg-mobile-preview.png)
-![project preview](https://i.postimg.cc/grVyLGv8/gatheredwares-desktop-preview.png)
-![project preview](https://i.postimg.cc/4m11qXys/gatheredwares-mobile-preview.png)
-![project preview](https://postimg.cc/p5fB2HBQ)
+![project preview](https://i.postimg.cc/vZ525sQP/jg-portfolio-desktop-preview2.png)
+![project preview](https://i.postimg.cc/5NCsMVFx/rmdb-desktop-preview.png)
+![project preview](https://i.postimg.cc/1XgJXxCr/rmdb-mobile-preview.png)
+![project preview](https://i.postimg.cc/GtZzsM6w/mg-desktop-preview.png)
+![project preview](https://i.postimg.cc/yd8fq305/mg-desktop-preview2.png)
+![project preview](https://i.postimg.cc/cHkFd1mJ/mg-mobile-preview.png)
+![project preview](https://i.postimg.cc/053V3QjW/gatheredwares-desktop-preview.png)
+![project preview](https://i.postimg.cc/ncywsztj/gatheredwares-mobile-preview.png)
+![project preview](https://i.postimg.cc/D0DpPfJN/2048-preview2.png)
 
 
 This is a portfolio website to show my front end web development skills. I focused heavily on javascript and then React. But also html5, css3/scss, materialUI, Stripe, Commerce.js, styled components, single page routing, rest APIs, node.js, and adobe illustrator; shown through projects.
