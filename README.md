@@ -61,7 +61,7 @@
 ![project preview](https://i.postimg.cc/vg9rzsCR/mg-mobile-preview.png)
 ![project preview](https://i.postimg.cc/grVyLGv8/gatheredwares-desktop-preview.png)
 ![project preview](https://i.postimg.cc/4m11qXys/gatheredwares-mobile-preview.png)
-![project preview](https://i.postimg.cc/p5fB2HBQ/2048-preview2.png)
+![project preview](https://postimg.cc/p5fB2HBQ)
 
 
 This is a portfolio website to show my front end web development skills. I focused heavily on javascript and then React. But also html5, css3/scss, materialUI, Stripe, Commerce.js, styled components, single page routing, rest APIs, node.js, and adobe illustrator; shown through projects.
